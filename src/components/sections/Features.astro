@@ -1,0 +1,51 @@
+---
+import Container from '../shared/Container.astro'
+import Title from '../shared/Title.astro'
+import Paragraph from '../shared/Paragraph.astro'
+---
+
+<section id='features'>
+  <Container className='flex flex-col midmd:flex-row gap-10 lg:gap-12'>
+    <div class='flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col'>
+      <Title> Nuestra <span class='text-sec font-bold'>Historia</span> </Title>
+      <Paragraph className='mt-8'>
+        SJoaquín comenzó este proyecto como profesional recién recibido de la
+        Universidad Tecnológica Nacional, trabajando de forma independiente para
+        grandes empresas de la construcción. Poco a poco la calidad técnica de
+        sus trabajos lo llevaron a enfrentar desafíos cada vez más importantes y
+        surgió la necesidad de ampliarse al campo de la construcción. Es allí
+        que sumó a sus socios Victor y Mario con quienes pudo abarcar la
+        dirección de obra y fabricación de estructuras. A la par del desarrollo
+        humano también la empresa se fue ampliando y creciendo, primero con sede
+        en Martinez para luego tener sus oficinas propias en Belén de Escobar.
+        El taller de fabricación también se sitúa en esta localidad con un plan
+        integral de ampliación año a año
+      </Paragraph>
+      <Paragraph className='mt-4'>
+        Nuestra filosofía como estudio es cuidar a cada cliente mediante un
+        trato directo y personalizado. Priorizamos la formación profesional y
+        permanente del equipo, lo que nos permite proponernos como una excelente
+        alternativa en ingeniería estructural. Realizamos ingeniería acorde a la
+        necesidad del cliente, desde esquemas conceptuales hasta ingeniería de
+        detalle para la fabricación. Entendemos la obra como un todo, desde las
+        ideas preliminares hasta la finalización de las obras. Por ello,
+        acompañamos al cliente durante la fabricación apoyando al jefe de
+        planta, despejando consultas del proyecto y ayudando a optimizar los
+        procesos constructivos.
+      </Paragraph>
+    </div>
+
+    <div
+      class='max-w-md mx-auto midmd:max-w-none lg:mx-0 lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto'>
+      <div class='w-full h-80 sm:h-96 midmd:h-full relative'>
+        <img
+          src={'/images/historia.jpeg'}
+          alt='Impulzá tus ventas con un equipo de experiencia comprobada.'
+          width='800'
+          height='1385'
+          class='lg:absolute lg:w-full lg:h-full rounded-3xl object-cover object-center lg:max-h-none max-h-96 shadow-md'
+        />
+      </div>
+    </div>
+  </Container>
+</section>

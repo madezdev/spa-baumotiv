@@ -1,0 +1,39 @@
+---
+import Service from '../cards/Service.astro'
+import Container from '../shared/Container.astro'
+import Paragraph from '../shared/Paragraph.astro'
+import Title from '../shared/Title.astro'
+import { services } from '../../utils/data.ts'
+
+type ServicesProps = {
+  title: string
+  description: string
+  icon: string
+}
+---
+
+<section id='services'>
+  <Container className='space-y-10 md:sapce-y-12'>
+    <div class='text-center max-w-6xl mx-auto space-y-4'>
+      <div class="animate-pulsing animate-delay-500">
+        <Title>SERVICIOS</Title>
+      </div>
+      <Paragraph>
+        Contamos con una planta industrial de 600 m2 para la fabricación de estructuras metálicas. Procesamos acero laminado y fabricamos nuestros propios elementos en sección de alma llena. Estamos equipados con puente grúa, pantógrafo CNC (plasma y oxicorte), plegadora, guillotina, torno, fresadora y equipos para la fabricación de zinguerías, lo que nos permite afrontar desafíos técnicos de gran complejidad
+      </Paragraph>
+    </div>
+    <div class='grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'>
+      {
+        services.map((service: ServicesProps) => {
+          return (
+            <Service
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+            />
+          )
+        })
+      }
+    </div>
+  </Container>
+</section>
